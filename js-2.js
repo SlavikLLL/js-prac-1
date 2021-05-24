@@ -1,4 +1,16 @@
 const arr = [10, 1, -1, -10, 1192, 321, 312, 16, 6, -9, 33, -34, -1, 0, -0, 8, 8, 8, 9, 4, -2, -5, 2];
+function MainFunction(callback){
+    let positiveArr=[];
+   if(arr.length == 0){
+       console.log("Ошибка");
+   }
+   else {
+       callback(arr);
+   }
+    
+}
+
+
 function isNumberInRange(arr){
     let positiveArr=[];
     for (let i=0;i<=arr.length-1;i++){
@@ -11,4 +23,4 @@ function isNumberInRange(arr){
     console.log("Исходный массив ",arr);
     console.log("Новый массив",positiveArr);
 }
-isNumberInRange(arr);
+MainFunction(isNumberInRange);
